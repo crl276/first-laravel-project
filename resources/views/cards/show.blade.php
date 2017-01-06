@@ -11,13 +11,13 @@
 
 					<li class="list-group-item"> <a href="/notes/{{ $note->id }}/edit">{{ $note->body }}</a> <br>
 					{{ $note->created_at }}
-					<a href="#" class="pull-right">{{ $note->user->username }}</a> </li>
+					<a href="#" class="pull-right">created by{{ $note->user->username }}</a> </li>
 
 				@endforeach
 			</ul>
 
 			<hr>
-			<h3>Add a New Note</h3>
+			<h3>Add a New Note Below</h3>
 
 			<form method="POST" action="/cards/{{ $card->id }}/notes">
 				{{ csrf_field() }}
